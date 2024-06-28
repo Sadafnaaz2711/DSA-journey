@@ -26,15 +26,15 @@ int allocatebooks(int arr[],int n,int m)
 {
     int s=0;
     int sum=0;
-
+    int e=sum;
+    int ans=-1;
+    int mid=s+(e-s)/2;
+    
     for(int i=0;i<n;i++){
         sum+=arr[i];
     }
 
-    int e=sum;
-    int ans=-1;
-    int mid=s+(e-s)/2;
-
+    
     while (s<=e)
     {
        if(Ispossible(arr,n,m,mid))
